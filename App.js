@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, Image, View, StyleSheet, SafeAreaView, Dimensions, ScrollView } from 'react-native';
 import * as Location from 'expo-location';
 import Constants from 'expo-constants';
@@ -124,8 +124,7 @@ export default function App() {
       marginTop: -5,
       letterSpacing: -2,
       color: "#222",
-      fontSize: 45,
-      fontFamily: 'Didot'
+      fontSize: 45
     },
     bold: {
       fontWeight: "bold",
@@ -170,11 +169,8 @@ export default function App() {
     bottomIconsInner: {
       marginHorizontal: 15,
       borderRadius: 25,
-      color: "white",
       paddingHorizontal: 18,
-      paddingVertical: 12,
-      width: (Dimensions.get('screen').width * 0.7 - 60) / 3,
-      height: (Dimensions.get('screen').width * 0.7 - 60) / 3
+      paddingVertical: 12
     },
     header: {
       fontWeight: "bold",
@@ -202,7 +198,6 @@ export default function App() {
     mapIcon: {
       paddingLeft: 30,
       paddingRight: 4,
-      marginTop: -1
     },
     credits: {
       position: "absolute",
@@ -233,7 +228,7 @@ export default function App() {
 
         <View style={{ marginTop: 110 }}>
           <View style={styles.card}>
-            <Text style={{ fontSize: 16 }}>Location permissions not granted.</Text>
+            <Text style={{ fontSize: 16 }}>Location permission not granted.</Text>
           </View>
         </View>
 
